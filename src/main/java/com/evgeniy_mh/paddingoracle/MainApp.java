@@ -1,29 +1,27 @@
-package sample;
+package main.java.com.evgeniy_mh.paddingoracle;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import main.java.com.evgeniy_mh.paddingoracle.FXMLController;
 
-public class Main extends Application {
+public class MainApp extends Application {
 
   @Override
-  public void start(Stage primaryStage) throws Exception {
+  public void start(Stage stage) throws Exception {
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(getClass().getResource("/fxml/mainOverview.fxml"));
-    AnchorPane rootOverview = loader.load();
+    AnchorPane rootOverview = (AnchorPane) loader.load();
 
     Scene scene = new Scene(rootOverview);
-    primaryStage.setTitle("Padding Oracle");
-    primaryStage.setScene(scene);
-    primaryStage.show();
+    stage.setTitle("Padding Oracle");
+    stage.setScene(scene);
+    stage.show();
 
     FXMLController mc = loader.getController();
-    mc.setMainApp(this);
+    //mc.setMainApp(this);
   }
-
 
   public static void main(String[] args) {
     launch(args);
