@@ -12,7 +12,7 @@ public class MainApp extends Application {
   public void start(Stage stage) throws Exception {
     FXMLLoader loader = new FXMLLoader();
     loader.setLocation(getClass().getResource("/fxml/mainOverview.fxml"));
-    AnchorPane rootOverview = (AnchorPane) loader.load();
+    AnchorPane rootOverview = loader.load();
 
     Scene scene = new Scene(rootOverview);
     stage.setTitle("Padding Oracle");
@@ -20,7 +20,7 @@ public class MainApp extends Application {
     stage.show();
 
     FXMLController mc = loader.getController();
-    //mc.setMainApp(this);
+    mc.setMainApp(this);
   }
 
   public static void main(String[] args) {

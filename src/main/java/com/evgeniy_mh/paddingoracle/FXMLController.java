@@ -18,13 +18,12 @@ import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import sample.Main;
 
 public class FXMLController {
 
   final int AES_BLOCK_SIZE = 16;
 
-  private Main mainApp;
+  private MainApp mainApp;
   private FileChooser fileChooser = new FileChooser();
   private Stage stage;
 
@@ -53,7 +52,7 @@ public class FXMLController {
   @FXML
   public ProgressBar decodeProgressBar;
 
-  public void setMainApp(Main mainApp) {
+  public void setMainApp(MainApp mainApp) {
     this.mainApp = mainApp;
   }
 
